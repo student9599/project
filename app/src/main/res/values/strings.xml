@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BluetoothTransferApp</string>
+    <string name="rubel_id">221258: Rubel Chowdhury</string>
+    <string name="file_location_hint">Selected file location will appear here</string>
+    <string name="select_file">Select File</string>
+    <string name="send_file">Send File via Bluetooth</string>
+    <string name="exit">Exit</string>
+    <string name="selected_file_image">Selected File Image</string>
+    <string name="file_transfer_title">File Transfer</string>
+</resources>

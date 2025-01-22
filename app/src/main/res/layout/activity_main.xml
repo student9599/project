@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <!-- Scrollable container -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp">
+
+        <!-- LinearLayout as root inside ScrollView for easier scrolling -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Title text -->
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/file_transfer_title"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Subtitle or Info text -->
+            <TextView
+                android:id="@+id/subtitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:hint="@string/file_location_hint"
+                android:gravity="center"
+                android:text="@string/rubel_id"
+                android:textSize="16sp"
+                android:textColor="@color/gray"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- CardView for file location -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardFileLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="8dp"
+                app:cardBackgroundColor="@color/white">
+
+                <TextView
+                    android:id="@+id/txtFileLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:hint="@string/file_location_hint"
+                    android:textSize="16sp"
+                    android:textColor="@color/black" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Button to select a file -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSelectFile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:text="@string/select_file"
+                android:textSize="16sp"
+                android:padding="12dp"
+                app:cornerRadius="16dp"
+                app:icon="@drawable/ic_file"
+                app:iconPadding="8dp"
+                app:iconTint="@color/white"
+                app:backgroundTint="@color/primary"/>
+
+            <!-- Button to send file via Bluetooth -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSendFile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:text="@string/send_file"
+                android:textSize="16sp"
+                android:padding="12dp"
+                app:cornerRadius="16dp"
+                app:icon="@drawable/ic_bluetooth"
+                app:iconPadding="8dp"
+                app:iconTint="@color/white"
+                app:backgroundTint="@color/secondary"
+                android:visibility="gone"/>
+
+            <!-- Button to exit the app -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnExit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/exit"
+                android:textSize="16sp"
+                android:padding="12dp"
+                app:cornerRadius="16dp"
+                app:backgroundTint="@color/error"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- ImageView for displaying selected file -->
+            <ImageView
+                android:id="@+id/imgSelectedFile"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:contentDescription="@string/selected_file_image"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
